@@ -3,6 +3,7 @@ import Skills from "./components/Skills";
 import Service from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Navbar from "./Layouts/Navbar";
 import { useEffect } from "react";
 // Animation package
 import Aos from "aos";
@@ -18,6 +19,7 @@ const App = () => {
   }, []);
   return (
     <div className="">
+      <Navbar />
       <Hero />
       <Skills />
       <Service />

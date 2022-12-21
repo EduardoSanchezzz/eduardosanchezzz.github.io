@@ -4,7 +4,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="overflow-hidden">
-      <h1 className="absolute top-[0] left-[0]" data-aos="fade-up">
+      <h1 className="absolute top-[0] right-[0]" data-aos="fade-up">
             <span className="text-dark_primary">{hero.firstName + " " + hero.LastName}</span>
       </h1>
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end items-center justify-center">
