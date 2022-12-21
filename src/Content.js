@@ -15,6 +15,10 @@ import reactjs from "./assets/images/Skills/react.png";
 import cpp from "./assets/images/Skills/cpp.svg";
 import python from "./assets/images/Skills/python.png";
 
+import project1 from "./assets/images/Projects/project1.png";
+import project2 from "./assets/images/Projects/project2.png";
+import project3 from "./assets/images/Projects/project3.png";
+
 export const content = {
     nav: [
         {
@@ -104,6 +108,35 @@ export const content = {
             text: "Eduardo Sanchez",
             icon: BsLinkedin,
             link: "https://www.linkedin.com/sanchez-ed/",
+          },
+        ],
+      },
+      Projects: {
+        title: "Projects",
+        project_content: [
+          {
+            id: 1,
+            data: {
+                title: "Music Collection App",
+                image: project1,
+                desc: "Created a responsive website to showcase some music I enjoy."
+            }
+          },
+          {
+            id: 2,
+            data: {
+                title: "Revamped Maps Widget",
+                image: project2,
+                desc: "Created a maps widget that used an API to add some functionality to existing website."
+            }
+          },
+          {
+            id: 3,
+            data: {
+                title: "Homepage Redesign",
+                image: project3,
+                desc: "Completely redesigned homepage of website, making it more user-friendly and stylish."
+            }
           },
         ],
       },

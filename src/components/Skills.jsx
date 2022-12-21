@@ -9,12 +9,11 @@ const Skills = () => {
 
       {/* content */}
       <div className="md:container px-5  py-14">
-        <h2 className="title" data-aos="fade-down">
-          {skills.title}
-        </h2>
-        <h4 className="subtitle" data-aos="fade-down">
-          {skills.subtitle}
-        </h4>
+        <div className="pb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+            {skills.title}
+          </p>
+        </div>
         <br />
         <div className="flex flex-wrap gap-4 justify-center">
           {skills.skills_content.map((skill, i) => (
