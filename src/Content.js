@@ -2,7 +2,7 @@ import heroBackground from "./assets/images/Hero/heroBackground.svg";
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdCall } from "react-icons/md";
-import { BsInstagram, BsPlusCircleFill } from "react-icons/bs";
+import { BsLinkedin, BsPlusCircleFill } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
@@ -52,7 +52,6 @@ export const content = {
     },
     skills: {
         title: "Skills",
-        subtitle: "",
         skills_content: [
           {
             name: "Javascript",
@@ -87,6 +86,26 @@ export const content = {
           },
         ],
         icon: BsPlusCircleFill,
+      },
+      Contact: {
+        title: "Contact Me",
+        social_media: [
+          {
+            text: "e5sanchez@uwaterloo.ca",
+            icon: GrMail,
+            link: "mailto:e5sanchez@uwaterloo.ca",
+          },
+          {
+            text: "905-966-4113",
+            icon: MdCall,
+            link: "/",
+          },
+          {
+            text: "Eduardo Sanchez",
+            icon: BsLinkedin,
+            link: "https://www.linkedin.com/sanchez-ed/",
+          },
+        ],
       },
 
 
