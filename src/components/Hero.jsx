@@ -1,12 +1,40 @@
 import { content } from "../Content";
+import "../App.css";
+import { useEffect, useState } from 'react'
+const FADE_INTERVAL_MS = 1750;
+const WORD_CHANGE_INTERVAL_MS = FADE_INTERVAL_MS * 2;
+const WORDS_TO_ANIMATE = ['Hello', 'Hola', 'Bonjour', '👋🏻'];
+const WORDS_TO_ANIMATE2 = ['impress', 'innovate', 'are stylish', 'inspire'];
+
+
+
 const Hero = () => {
   const { hero } = content;
 
+  const [fadeProp, setFadeProp] = useState({ fade: 'fade-in' });
+  const [wordOrder, setWordOrder] = useState(0);
+
+  useEffect(() => {
+    const fadeTimeout = setInterval(() => {
+      fadeProp.fade === 'fade-in' ? setFadeProp({ fade: 'fade-out' }) : setFadeProp({ fade: 'fade-in' })
+    }, FADE_INTERVAL_MS);
+
+    return () => clearInterval(fadeTimeout);
+  }, [fadeProp]);
+
+  useEffect(() => {
+    const wordTimeout = setInterval(() => {
+      setWordOrder((prevWordOrder) => (prevWordOrder + 1) % WORDS_TO_ANIMATE.length)
+    }, WORD_CHANGE_INTERVAL_MS);
+
+    return () => clearInterval(wordTimeout);
+  }, []);
+
   return (
     <section id="home" className="overflow-hidden">
-      <h1 className="absolute top-[0] right-[0]" data-aos="fade-up">
-            <span className="text-dark_primary">{hero.firstName + " " + hero.LastName}</span>
-      </h1>
+      <p className="absolute top-[0] right-[0]" data-aos="fade-up">
+            <span className="text-sm text-white font-bold">{hero.firstName + " " + hero.LastName}</span>
+      </p>
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end items-center justify-center">
         <div
           data-aos="slide-left"
@@ -25,7 +53,11 @@ const Hero = () => {
 
         {/* first col */}
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
-          <h2>{hero.title}</h2>
+          <p className="text-4xl font-bold"><span className={fadeProp.fade}>{WORDS_TO_ANIMATE[wordOrder]}</span></p>
+          <p className="text-4xl font-normal">My name is</p>
+          <p className="text-7xl font-bold">Eduardo Sanchez</p>
+          <br/>
+          <p className="text-7xl font-normal">{hero.title}</p>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
               <div
@@ -35,13 +67,13 @@ const Hero = () => {
                 className={`flex items-center w-80 gap-5
             ${i === 1 && " flex-row-reverse text-right"}  `}
               >
-                <p>{content.text}</p>
+                <p className="text-4xl">I design products that <span className={fadeProp.fade}>{WORDS_TO_ANIMATE2[wordOrder]}</span></p>
               </div>
             ))}
           </div>
           <br />
           <div className="flex justify-end">
-            <button className="btn">{hero.btnText}</button>
+            <button className="btn"><a href="#contact">{hero.btnText}</a></button>
           </div>
         </div>
         

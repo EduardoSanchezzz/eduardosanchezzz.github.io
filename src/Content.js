@@ -103,7 +103,7 @@ export const content = {
           {
             text: "Eduardo Sanchez",
             icon: BsLinkedin,
-            link: "https://www.linkedin.com/sanchez-ed/",
+            link: "https://www.linkedin.com/in/sanchez-ed/",
           },
         ],
       },
