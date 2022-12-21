@@ -44,7 +44,7 @@ const Projects = () => {
 
   return (
     <div
-      name="portfolio"
+      id="portfolio"
       className="bg-white w-full text-white md:h-screen"
     >
       <Modal

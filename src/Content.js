@@ -30,11 +30,7 @@ export const content = {
           icon: BiUser,
         },
         {
-          link: "#services",
-          icon: RiServiceLine,
-        },
-        {
-          link: "#projects",
+          link: "#portfolio",
           icon: RiProjectorLine,
         },
         {
