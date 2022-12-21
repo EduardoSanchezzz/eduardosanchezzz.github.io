@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      Poppins: "Helvetica Neue",
+      Poppins: "Poppins",
       Paprika: "Helvetica",
       Inria: "Helvetica",
     },
@@ -13,9 +13,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        dark_primary: "#06223F",
+        dark_primary: "#42033D",
         bg_light_primary: "#F5F9FD",
-        gray: "#B7C5D3",
+        gray: "#B7C5D3", 
       },
       backgroundImage: {
         primaryLinear: "linear-gradient(90deg, #FFF 0%, #721D59 50%)",

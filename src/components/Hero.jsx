@@ -4,6 +4,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="overflow-hidden">
+      <h1 className="absolute top-[0] left-[0]" data-aos="fade-up">
+            <span className="text-dark_primary">{hero.firstName + " " + hero.LastName}</span>
+      </h1>
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end items-center justify-center">
         <div
           data-aos="slide-left"
@@ -18,10 +21,6 @@ const Hero = () => {
             className="h-full object-cover"
           />
         </div>
-          <h1 className="rotate-90 absolute lg:top-[30%] top-[15%] right-[-20%] text-[#EAF2FA]">
-            {hero.firstName}{" "}
-            <span className="text-dark_primary">{hero.LastName}</span>
-          </h1>
         </div>
 
         {/* first col */}
