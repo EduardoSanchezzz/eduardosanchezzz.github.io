@@ -1,12 +1,19 @@
 import heroBackground from "./assets/images/Hero/heroBackground.svg";
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
-import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
+import { MdCall } from "react-icons/md";
+import { BsInstagram, BsPlusCircleFill } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
+
+import figma from "./assets/images/Skills/figma.png";
+import js from "./assets/images/Skills/js.png";
+import mysql from "./assets/images/Skills/mysql.png";
+import reactjs from "./assets/images/Skills/react.png";
+import cpp from "./assets/images/Skills/cpp.svg";
+import python from "./assets/images/Skills/python.png";
 
 export const content = {
     nav: [
@@ -30,7 +37,7 @@ export const content = {
           link: "#contact",
           icon: MdOutlinePermContactCalendar,
         },
-      ],
+    ],
     hero: {
         title: "Web Developer",
         firstName: "Sanchez",
@@ -42,6 +49,45 @@ export const content = {
             text: "I design products that impress, improve, are stylish, are responsive",
           },
         ],
-      }
+    },
+    skills: {
+        title: "Skills",
+        subtitle: "",
+        skills_content: [
+          {
+            name: "Javascript",
+            para: "2+ years of experience",
+            logo: js,
+          },
+          {
+            name: "ReactJS",
+            para: "2+ years of experience",
+            logo: reactjs,
+          },
+          {
+            name: "C++",
+            para: "3+ years of experience",
+            logo: cpp,
+          },
+          {
+            name: "MySQL",
+            para: "1+ year of experience",
+            logo: mysql,
+          },
+          {
+            name: "Python",
+            para: "1+ year of experience",
+            logo: python,
+          },
+          {
+            name: "Figma",
+            para: "1+ year of experience",
+            logo: figma,
+            
+          },
+        ],
+        icon: BsPlusCircleFill,
+      },
+
 
 }
