@@ -60,6 +60,7 @@ const Projects = () => {
           <li>Stylish Website created with ReactJS to showcase music I listen to</li>
           <li>Created react hooks to create modular components</li>
           <li>Used CSS flexbox and grid to create a dynamic and responsive user interface </li>
+          <a className="underline" href="https://eduardosanchezzz.github.io/music-collection-app/">Demo</a>
         </ul>
         <br />
         <div className="flex justify-end">
