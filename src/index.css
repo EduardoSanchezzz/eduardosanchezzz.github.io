@@ -1,81 +1,290 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+:root {
+  font-family: "Zen Kaku Gothic Antique";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: #000;
+  text-decoration: none;
 }
-/* Inria serif */
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
-/* Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Paprika */
-@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span {
-    @apply text-dark_primary;
-  }
-  h1 {
-    @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
-  }
-  h2 {
-    @apply font-Inria text-5xl font-bold;
-  }
-  h3 {
-    @apply font-Paprika text-5xl;
-  }
-  h4 {
-    @apply md:text-4xl text-3xl !leading-relaxed font-Paprika;
-  }
-  h6 {
-    @apply font-Paprika font-bold text-[#253D57] leading-8;
-  }
-
-  p {
-    @apply font-Poppins text-[0.95rem];
-  }
-  button {
-    @apply font-Poppins;
-  }
-  input,
-  textarea {
-    @apply bg-transparent outline-none font-Poppins;
-  }
+a:hover {
+  /* color: #535bf2; */
 }
 
-@layer utilities {
-  .btn {
-    @apply py-2 px-9 border-2 rounded-md
-     border-dark_primary rounded-br-3xl font-medium;
-  }
-  .title {
-    @apply md:text-3xl text-2xl;
-  }
-  .subtitle {
-    @apply text-gray;
-  }
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
-.swiper-pagination-bullet {
-  @apply w-3 h-3 bg-dark_primary;
+
+h1 {
+  font-size: 1.5vw;
+}
+h2 {
+
+}
+p {
+
+}
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15vw;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  position: relative;
+}
+.navbar .line {
+  position: absolute;
+  bottom: 0;
+  width: 90vw;
+}
+.navbar a {
+  padding: 0vw 1vw;
+  border-radius: 5%;
+  height: min-content;
+  /* filter: drop-shadow(0 6px 20px rgb(56, 125, 255)); */
+  transition: all 0.2s ease-in;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+  color: #535bf2;
+  filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );  
+}
+
+.landing-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas: 'nav' 'name' 'icons';
+}
+.name {
+  grid-area: name;
+  font-weight: 300;
+  font-size: 12vw;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  align-self: center;
+  justify-self: center;
+}
+.sanchez {
+  font-weight: 500;
+  position: relative;
+}
+.sanchez::before {
+  content: "SANCHEZ";
+  position: absolute;
+  left: -0.7vw;
+  top: -0.4vw;
+  color: #58E6FF;
+  z-index: -1;
+  opacity: 75%;
+}
+.sanchez::after {
+  content: "SANCHEZ";
+  position: absolute;
+  left: 0.7vw;
+  top: 0.4vw;
+  color: #FF59B7;
+  opacity: 75%;
+  z-index: -1;
+}
+.icons-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 5vw
+}
+.icons-container img {
+  width: 3vw;
+  transition: all 0.2s ease-in;
+}
+.icons-container img:hover {
+  transform: scale(1.1);
+}
+.projects-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 5vh 0;
+}
+.projects-container .line{
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  opacity: 25%;
+} 
+.projects-container h1{
+  padding: 2vh 2vw;
+  align-self: flex-start;
+}
+.project-container {
+  width: 90vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-container .title {
+  font-size: 4vw;
+  align-self: start;
+}
+.project-container a {
+  width: 80%;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );
+}
+.project-container img {
+  width: 100%;
+}
+.project-container a:hover {
+  transform: scale(1.05);
+}
+.project-container a::after {
+  max-width: 100%;
+  max-height: 100%;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5vw;
+  background: linear-gradient(219.43deg, rgba(0, 0, 0, 0) 31.93%, rgba(180, 0, 174, 0.31) 86.27%);
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: end;
+  padding: 20px;
+}
+.project-container a:hover::after {
+  opacity: 1;
+}
+.cpu a::after {
+  content: 'Visualization of how a simple RISC-V processor works';
+}
+.music a::after {
+  content: 'Responsive website showcasing a music collection';
+}
+.experience-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-container .line{
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  opacity: 25%;
+} 
+.experience-container h1{
+  padding: 2vh 2vw;
+  align-self: flex-start;
+}
+.job-card {
+  margin: 5vh 5vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 25vw;
+  aspect-ratio: 420/460;
+
+  color: #fff;
+  font-size: 2.25vw;
+  transition: all 0.2s ease-in;
+  filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );
+}
+.job-card:hover{
+  transform: scale(1.05);
+}
+.job-title {
+  font-weight: 700;
+  margin: 5vh 0;
+}
+.job-date {
+  font-weight: 400;
+  margin: 5vh 0;
+}
+.job-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.exp-cont {
+  display: flex;
+  flex-direction: row;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5vh 0;
+}
+.footer-container .line{
+  position: absolute;
+  top: 0;
+  width: 90vw;
+} 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+.footer-container img {
+  width: 3vw;
+  transition: all 0.2s ease-in;
+}
+.footer-container img:hover {
+  transform: scale(1.1);
+}
+.contact-container {
+  margin: 0 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3vw;
+}
+.contact {
+  font-weight: 500;
+  font-size: 1.5vw;
+}
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }
