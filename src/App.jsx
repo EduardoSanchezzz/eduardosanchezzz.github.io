@@ -5,7 +5,8 @@ import resume from './assets/resume.png'
 import home from './assets/home-icon.png'
 import line from './assets/line.svg'
 import resumeFile from './assets/EduardoSanchez.pdf'
-import test from './assets/projtest.png'
+import proj1 from './assets/proj1.png'
+import proj2 from './assets/proj2.png'
 import appleCard from './assets/apple-card.png'
 import vennCard from './assets/venncard.png'
 import imcCard from './assets/imc-card.png'
@@ -45,11 +46,11 @@ function App() {
         <h1>projects</h1>
         <div className="project-container cpu">
           <div className="title">RISC-V Processor</div>
-          <a href=""><img src={test} alt="" /></a>
+          <a href="https://eduardosanchezzz.github.io/cpu-flow/" target='blank'><img src={proj1} alt="" /></a>
         </div>
         <div className="project-container music">
           <div className="title">Music Showcase Website</div>
-          <a href=""><img src={test} alt="" /></a>
+          <a href="https://eduardosanchezzz.github.io/music-collection-app/" target='blank'><img src={proj2} alt="" /></a>
         </div>
       </div>
       <div className="experience-container" id='experience'>

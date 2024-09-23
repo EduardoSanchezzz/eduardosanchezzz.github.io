@@ -146,9 +146,10 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2vh;
 }
 .project-container .title {
-  font-size: 4vw;
+  font-size: 3vw;
   align-self: start;
 }
 .project-container a {
@@ -170,13 +171,13 @@ p {
   color: white;
   font-weight: 500;
   font-size: 1.5vw;
-  background: linear-gradient(219.43deg, rgba(0, 0, 0, 0) 31.93%, rgba(180, 0, 174, 0.31) 86.27%);
+  background: linear-gradient(22.5deg, rgba(255, 89, 183, .6) 20%, rgba(88, 230, 255, 0.5) 100%);
   z-index: 2;
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0;
-  left: 0;
+  bottom: 7px;
+  left: 3px;
   opacity: 0;
   transition: all 0.2s ease-in;
   display: flex;
@@ -224,7 +225,9 @@ p {
   filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );
 }
 .job-card:hover{
-  transform: scale(1.05);
+  /* FIX WHEN ADDING JOB EXPERIENCE */
+  /* transform: scale(1.05); */
+  cursor: default;
 }
 .job-title {
   font-weight: 700;
@@ -287,4 +290,5 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  font-size: 1vw;
 }
