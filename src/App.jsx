@@ -127,7 +127,7 @@ function App() {
     setTimeout(() => {
       setSelectedJob(null);
       setIsClosing(false);
-    }, 280);
+    }, 400);
   };
 
   const handleCardClick = (exp, e) => {
@@ -179,11 +179,11 @@ function App() {
   return (
     <>
       <div className='navbar' data-aos="slide-down" data-aos-once='true'>
-        <a href='/#projects'>
-          <h1>projects</h1>
-        </a>
         <a href='/#experience'>
           <h1>experience</h1>
+        </a>
+        <a href='/#projects'>
+          <h1>projects</h1>
         </a>
         <Link to={'/about'}>
           <h1>about</h1>
@@ -204,6 +204,100 @@ function App() {
           <a href='https://www.linkedin.com/in/sanchez-ed/' target="_blank"><img src={linkedIn} className='logo' alt='LinkedIn Icon' /></a>
           <a href='mailto:e5sanchez@uwaterloo.ca' target="_blank"><img src={mail} className='logo' alt='Mail Icon' /></a>
           <a href={resumeFile} target="_blank"><img src={resume} className='logo' alt='Doc Icon' /></a>
+        </div>
+      </div>
+      <div className="experience-container" id='experience'>
+        <img src={line} className='line' alt='line' />
+        <h1>experience</h1>
+        <div className='exp-cont'>
+          {experiences.slice(0, 2).map((exp) => (
+            <div
+              key={exp.id}
+              className='job-card'
+              data-aos={exp.aos}
+              data-aos-duration="1300"
+              data-aos-easing="ease-out-cubic"
+              onClick={(e) => handleCardClick(exp, e)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleCardClick(exp, e);
+                }
+              }}
+            >
+              <img src={exp.img} alt="" />
+              <div className='job-header'>
+                <div className='job-title'>{exp.title}</div>
+                <div className='job-company'>{exp.company}</div>
+              </div>
+              <div className='job-footer'>
+                <div className='job-location'>{exp.location}</div>
+                <div className='job-date'>{exp.date}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className='exp-cont'>
+          {experiences.slice(2, 4).map((exp) => (
+            <div
+              key={exp.id}
+              className='job-card'
+              data-aos={exp.aos}
+              data-aos-duration="1300"
+              data-aos-easing="ease-out-cubic"
+              onClick={(e) => handleCardClick(exp, e)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleCardClick(exp, e);
+                }
+              }}
+            >
+              <img src={exp.img} alt="" />
+              <div className='job-header'>
+                <div className='job-title'>{exp.title}</div>
+                <div className='job-company'>{exp.company}</div>
+              </div>
+              <div className='job-footer'>
+                <div className='job-location'>{exp.location}</div>
+                <div className='job-date'>{exp.date}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className='exp-cont'>
+          {experiences.slice(4, 6).map((exp) => (
+            <div
+              key={exp.id}
+              className='job-card'
+              data-aos={exp.aos}
+              data-aos-duration="1300"
+              data-aos-easing="ease-out-cubic"
+              onClick={(e) => handleCardClick(exp, e)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleCardClick(exp, e);
+                }
+              }}
+            >
+              <img src={exp.img} alt="" />
+              <div className='job-header'>
+                <div className='job-title'>{exp.title}</div>
+                <div className='job-company'>{exp.company}</div>
+              </div>
+              <div className='job-footer'>
+                <div className='job-location'>{exp.location}</div>
+                <div className='job-date'>{exp.date}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className='projects-container' id='projects'>
@@ -238,94 +332,6 @@ function App() {
           <a href="https://eduardosanchez.dev/music-collection-app/" target='blank'>
             <img src={proj2} alt="" />
           </a>
-        </div>
-      </div>
-      <div className="experience-container" id='experience'>
-        <img src={line} className='line' alt='line' />
-        <h1>experience</h1>
-        <div className='exp-cont'>
-          {experiences.slice(0, 2).map((exp) => (
-            <div
-              key={exp.id}
-              className='job-card'
-              data-aos={exp.aos}
-              onClick={(e) => handleCardClick(exp, e)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  handleCardClick(exp, e);
-                }
-              }}
-            >
-              <img src={exp.img} alt="" />
-              <div className='job-header'>
-                <div className='job-title'>{exp.title}</div>
-                <div className='job-company'>{exp.company}</div>
-              </div>
-              <div className='job-footer'>
-                <div className='job-location'>{exp.location}</div>
-                <div className='job-date'>{exp.date}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className='exp-cont'>
-          {experiences.slice(2, 4).map((exp) => (
-            <div
-              key={exp.id}
-              className='job-card'
-              data-aos={exp.aos}
-              onClick={(e) => handleCardClick(exp, e)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  handleCardClick(exp, e);
-                }
-              }}
-            >
-              <img src={exp.img} alt="" />
-              <div className='job-header'>
-                <div className='job-title'>{exp.title}</div>
-                <div className='job-company'>{exp.company}</div>
-              </div>
-              <div className='job-footer'>
-                <div className='job-location'>{exp.location}</div>
-                <div className='job-date'>{exp.date}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className='exp-cont'>
-          {experiences.slice(4, 6).map((exp) => (
-            <div
-              key={exp.id}
-              className='job-card'
-              data-aos={exp.aos}
-              onClick={(e) => handleCardClick(exp, e)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  handleCardClick(exp, e);
-                }
-              }}
-            >
-              <img src={exp.img} alt="" />
-              <div className='job-header'>
-                <div className='job-title'>{exp.title}</div>
-                <div className='job-company'>{exp.company}</div>
-              </div>
-              <div className='job-footer'>
-                <div className='job-location'>{exp.location}</div>
-                <div className='job-date'>{exp.date}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
       <div className="footer-container" id='contact'>

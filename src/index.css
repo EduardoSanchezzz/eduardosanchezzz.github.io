@@ -53,10 +53,13 @@ p {
   top: 0;
   z-index: 100;
   background-color: #fff;
+  padding-right: 3.5vw;
+  box-sizing: border-box;
 }
 .scroll-container {
   position: absolute;
   bottom: 0;
+  left: 5vw;
   width: 90vw;
   display: flex;
   flex-direction: row;
@@ -245,9 +248,13 @@ p {
   container-type: inline-size;
 
   color: #fff;
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease !important;
   filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );
   cursor: pointer;
+}
+[data-aos].job-card {
+  transition-property: opacity, transform !important;
+  transition-duration: 1.3s !important;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 .job-card:hover,
 [data-aos].job-card:hover,
@@ -255,6 +262,7 @@ p {
   transform: scale(1.05) translateY(-6px) !important;
   cursor: pointer;
   filter: drop-shadow(rgba(88, 230, 255, 0.4) 0.6vw 1.2vw 1.6vw ) !important;
+  transition: transform 0.38s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease !important;
   z-index: 10;
 }
 .job-card:active,
@@ -331,12 +339,12 @@ p {
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  animation: modalFadeIn 0.25s ease-out forwards;
+  animation: modalFadeIn 0.35s ease-out forwards;
 }
 
 .job-modal-backdrop.closing {
   pointer-events: none;
-  animation: modalFadeOut 0.28s ease-in forwards;
+  animation: modalFadeOut 0.4s ease-in forwards;
 }
 
 @keyframes modalFadeIn {
@@ -365,12 +373,12 @@ p {
   padding: 5% 4%;
   box-sizing: border-box;
   container-type: inline-size;
-  animation: cardFlyCenter 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: cardFlyCenter 0.52s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .job-card-expanded.closing {
   pointer-events: none;
-  animation: cardFlyBack 0.28s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: cardFlyBack 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes cardFlyCenter {
@@ -562,8 +570,9 @@ p {
   text-decoration: underline;
 }
 .me-img img {
-  width: 40vw;
-  max-width: 500px;
+  width: 20vw;
+  max-width: 300px;
+  border-radius: 3vw;
 }
 .project-page {
   margin: 0 5vw;
