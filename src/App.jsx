@@ -14,6 +14,8 @@ import appleCard from './assets/apple-card.png'
 import vennCard from './assets/venncard.png'
 import imcCard from './assets/imc-card.png'
 import rxCard from './assets/rxcard.png'
+import qcCard from './assets/qc-card1.png'
+import fireflyCard from './assets/fireflycard.png'
 import './App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -97,26 +99,74 @@ function App() {
         <h1>experience</h1>
         <div className='exp-cont'>
           <a href="#experience" className='job-card' data-aos="fade-right">
+            <img src={fireflyCard} alt="" />
+            <div className='job-header'>
+              <div className='job-title'>HW Engineer Intern</div>
+              <div className='job-company'>Firefly</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>New York, NY</div>
+              <div className='job-date'>Winter 2026</div>
+            </div>
+          </a>
+          <a href="#experience" className='job-card' data-aos="fade-down">
+            <img src={qcCard} alt="" />
+            <div className='job-header'>
+              <div className='job-title'>RFHW Engineer Intern</div>
+              <div className='job-company'>Qualcomm</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>San Diego, CA</div>
+              <div className='job-date'>Summer 2025</div>
+            </div>
+          </a>
+        </div>
+        <div className='exp-cont'>
+          <a href="#experience" className='job-card' data-aos="fade-up">
             <img src={appleCard} alt="" />
-            <div className='job-title'>RFHW Engineer Intern</div>
-            <div className='job-date'>Fall 2023</div>
+            <div className='job-header'>
+              <div className='job-title'>RFHW Engineer Intern</div>
+              <div className='job-company'>Apple</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>Cupertino, CA</div>
+              <div className='job-date'>Fall 2023</div>
+            </div>
           </a>
           <a href="#experience" className='job-card' data-aos="fade-down">
             <img src={rxCard} alt="" />
-            <div className='job-title'>SW Engineer Intern</div>
-            <div className='job-date'>Winter 2023</div>
+            <div className='job-header'>
+              <div className='job-title'>SW Engineer Intern</div>
+              <div className='job-company'>RxFood</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>Toronto, ON</div>
+              <div className='job-date'>Winter 2023</div>
+            </div>
           </a>
         </div>
         <div className='exp-cont'>
           <a href="#experience" className='job-card' data-aos="fade-up">
             <img src={vennCard} alt="" />
-            <div className='job-title'>SW Developer Intern</div>
-            <div className='job-date'>Winter 2022</div>
+            <div className='job-header'>
+              <div className='job-title'>SW Developer Intern</div>
+              <div className='job-company'>Venngage</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>Toronto, ON</div>
+              <div className='job-date'>Winter 2022</div>
+            </div>
           </a>
           <a href="#experience" className='job-card' data-aos="fade-left">
             <img src={imcCard} alt="" />
-            <div className='job-title'>SW Developer Intern</div>
-            <div className='job-date'>Fall 2020</div>
+            <div className='job-header'>
+              <div className='job-title'>SW Developer Intern</div>
+              <div className='job-company'>IMC</div>
+            </div>
+            <div className='job-footer'>
+              <div className='job-location'>Toronto, ON</div>
+              <div className='job-date'>Fall 2020</div>
+            </div>
           </a>
         </div>
       </div>

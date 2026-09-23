@@ -231,17 +231,20 @@ p {
   align-self: flex-start;
 }
 .job-card {
-  margin: 5vh 5vw;
+  margin: 3vw 4vw;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 25vw;
-  aspect-ratio: 420/460;
+  aspect-ratio: 420/461;
+  box-sizing: border-box;
+  padding: 5% 4%;
+  text-align: center;
+  container-type: inline-size;
 
   color: #fff;
-  font-size: 2.25vw;
   transition: all 0.2s ease-in;
   filter: drop-shadow(rgba(0, 98, 255, 0.1) 0.4vw 0.8vw 0.8vw );
 }
@@ -250,19 +253,51 @@ p {
   /* transform: scale(1.05); */
   cursor: default;
 }
+.job-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  width: 100%;
+  line-height: 1.2;
+}
+.job-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+  width: 100%;
+  line-height: 1.2;
+}
 .job-title {
   font-weight: 700;
-  margin: 5vh 0;
+  font-size: 2.25vw;
+  font-size: 9cqi;
+}
+.job-company {
+  font-weight: 500;
+  font-size: 1.75vw;
+  font-size: 7cqi;
+  opacity: 0.9;
+}
+.job-location {
+  font-weight: 400;
+  font-size: 1.5vw;
+  font-size: 6cqi;
+  opacity: 0.85;
 }
 .job-date {
-  font-weight: 400;
-  margin: 5vh 0;
+  font-weight: 500;
+  font-size: 1.75vw;
+  font-size: 7cqi;
 }
 .job-card img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -401,11 +436,27 @@ margin-bottom: 2vh;
   .navbar{
     height: 7vh;
   }
-  .job-title, .job-date{
-    margin: 5vw 0;
+  .job-card {
+    width: 40vw;
+    margin: 3vw 1.5vw;
   }
-  .job-date{
-    font-size: 2.5vw;
+  .job-header {
+    gap: 0.2em;
+  }
+  .job-footer {
+    gap: 0.2em;
+  }
+  .job-title {
+    font-size: 8.5cqi;
+  }
+  .job-company {
+    font-size: 6.8cqi;
+  }
+  .job-location {
+    font-size: 6.2cqi;
+  }
+  .job-date {
+    font-size: 6.8cqi;
   }
   .contact{
     font-size: 1.5vh;
